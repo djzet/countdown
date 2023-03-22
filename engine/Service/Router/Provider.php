@@ -18,6 +18,7 @@ class Provider extends AbstractProvider
     public function init()
     {
         $router = new Router('http://countdown.com/');
+
         $this->di->set($this->serviceName, $router);
     }
 }

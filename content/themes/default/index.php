@@ -1,0 +1,2 @@
+Index Template <?= $name ?>
+

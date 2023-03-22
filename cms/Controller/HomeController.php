@@ -2,24 +2,15 @@
 
 namespace Cms\Controller;
 
-use Engine\Controller;
-
-class HomeController extends Controller
+class HomeController extends CmsController
 {
-    /**
-     * @param $di
-     */
-    public function  __construct($di)
-    {
-        parent::__construct($di);
-    }
-
     public function index()
     {
-        echo 'Index Page';
+        $data = ['name' => 'Tur'];
+        $this->view->render('index', $data);
     }
-    public function news()
+    public function news($id)
     {
-        echo 'News Page';
+        echo $id;
     }
 }

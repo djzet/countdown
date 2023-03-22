@@ -26,8 +26,8 @@ class UrlDispatcher
     private $patterns =
         [
             'int' => '[0-9]+',
-            'str'=>'[a-zA-Z\.\-_%]+',
-            'any'=>'[a-zA-Z0-9\.\-_%]+',
+            'str' => '[a-zA-Z\.\-_%]+',
+            'any' => '[a-zA-Z0-9\.\-_%]+'
         ];
 
     /**
@@ -57,7 +57,46 @@ class UrlDispatcher
      */
     public function register($method, $pattern, $controller) // регистрирует наши роуты
     {
-        $this->routes[strtoupper($method)][$pattern] = $controller;
+        $convert = $this->convertPattern($pattern);
+        $this->routes[strtoupper($method)][$convert] = $controller;
+    }
+
+    /**
+     * @param $pattern
+     * @return array|mixed|string|string[]|null
+     */
+    private function convertPattern($pattern) // конвертирует (id:int) в нужнай нам вид
+    {
+        if (!str_contains($pattern, '('))
+        {
+            return $pattern;
+        }
+        return preg_replace_callback('#\((\w+):(\w+)\)#', [$this, 'replacePattern'], $pattern);
+    }
+
+    /**
+     * @param $matches
+     * @return string
+     */
+    private function replacePattern($matches)
+    {
+        return '(?<'.$matches[1].'>'.strtr($matches[2], $this->patterns).')'; //strtr заменяет совпадения из массива
+    }
+
+    /**
+     * @param $parameters
+     * @return mixed
+     */
+    private function processParam($parameters)
+    {
+        foreach ($parameters as $key => $value)
+        {
+            if (is_int($key))
+            {
+                unset($parameters[$key]);
+            }
+        }
+        return $parameters;
     }
 
     /**
@@ -74,6 +113,12 @@ class UrlDispatcher
         }
         return $this->doDispatch($method, $uri);
     }
+
+    /**
+     * @param $method
+     * @param $uri
+     * @return DispatchedRoute|void
+     */
     private function doDispatch($method, $uri)
     {
         foreach ($this->routes($method) as $route => $controller)
@@ -82,7 +127,7 @@ class UrlDispatcher
 
             if (preg_match($pattern, $uri, $parameters))
             {
-                return new DispatchedRoute($controller, $parameters);
+                return new DispatchedRoute($controller, $this->processParam($parameters));
             }
         }
     }
