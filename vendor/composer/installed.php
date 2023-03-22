@@ -1,9 +1,9 @@
 <?php return array(
     'root' => array(
         'name' => 'silaev/countdown',
-        'pretty_version' => '1.0.0+no-version-set',
-        'version' => '1.0.0.0',
-        'reference' => NULL,
+        'pretty_version' => 'dev-master',
+        'version' => 'dev-master',
+        'reference' => '4ddaa7528fee6bd70a6fb97fcdf16551c86bb95d',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -11,9 +11,9 @@
     ),
     'versions' => array(
         'silaev/countdown' => array(
-            'pretty_version' => '1.0.0+no-version-set',
-            'version' => '1.0.0.0',
-            'reference' => NULL,
+            'pretty_version' => 'dev-master',
+            'version' => 'dev-master',
+            'reference' => '4ddaa7528fee6bd70a6fb97fcdf16551c86bb95d',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),

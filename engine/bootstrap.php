@@ -3,7 +3,7 @@
 
 require_once __DIR__.'/../vendor/autoload.php'; //подключаем auto loading
 
-use Engine\Cms; // импорт класса Cms
+use Engine\Cms; // импорт класса cms
 use Engine\DI\DI; // импорт класса DI
 
 try
@@ -19,7 +19,7 @@ try
          $provider->init();
     }
 
-    $cms = new Cms($di); //создаем екземпляр класса Cms
+    $cms = new Cms($di); //создаем екземпляр класса cms
     $cms->run();//вызов функции run
 }
 catch (\ErrorException $e)// если исключение то выводим его
