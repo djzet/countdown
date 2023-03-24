@@ -1,17 +1,21 @@
 {
-    "name": "silaev/countdown",
-    "autoload": {
-        "psr-4": {
-            "Engine\\": "engine",
-            "Cms\\": "cms",
-            "Engine\\DI\\": "engine/DI"
-        }
-    },
-    "authors": [
-        {
-            "name": "silaev",
-            "email": "silaevegor2003@mail.ru"
-        }
-    ],
-    "require": {}
+  "name": "silaev/countdown",
+  "autoload": {
+    "psr-4": {
+      "Engine\\": "engine",
+      "Cms\\": "cms",
+      "Admin\\": "admin",
+      "Engine\\DI\\": "engine/DI"
+    }
+  },
+  "authors": [
+    {
+      "name": "silaev",
+      "email": "silaevegor2003@mail.ru"
+    }
+  ],
+  "require": {
+    "ext-pdo": "*",
+    "ext-mbstring": "*"
+  }
 }

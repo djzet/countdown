@@ -2,11 +2,18 @@
 
 namespace Engine\Core\Template;
 
+use Engine\Core\Template\Theme;
+
 class View
 {
+    /**
+     * @var Theme
+     */
+    protected $theme;
+
     public function __construct()
     {
-
+        $this->theme = new Theme();
     }
 
     /**
@@ -16,13 +23,14 @@ class View
      */
     public function render($template, $vars = [])
     {
-        $templatePath = ROOT_DIR.'/content/themes/default/'.$template.'.php';
+        $templatePath = $this->getTemplatePath($template, ENV);
 
         if (!is_file($templatePath))
         {
             throw new \InvalidArgumentException(sprintf('Template "%s" not found in "%s"', $template, $templatePath));
         }
 
+        $this->theme->setData($vars);
         extract($vars);
 
         ob_start();//буферезация используется при рендере
@@ -39,5 +47,19 @@ class View
         }
 
         echo ob_get_clean();//функция получает содержимое текущего буфера и очищает после вывода
+    }
+
+    /**
+     * @param $template
+     * @param $env
+     * @return string
+     */
+    private function getTemplatePath($template, $env = null) //получает путь темплате пути в зависимости от окружения
+    {
+        if ($env === 'Cms')
+        {
+            return ROOT_DIR.'/content/themes/default/'.$template.'.php';
+        }
+        return ROOT_DIR.'/View/'.$template.'.php';
     }
 }

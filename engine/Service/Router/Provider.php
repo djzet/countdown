@@ -1,6 +1,6 @@
 <?php
 
-namespace engine\Service\Router;
+namespace Engine\Service\Router;
 
 use Engine\Service\AbstractProvider;
 use Engine\Core\Router\Router;

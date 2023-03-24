@@ -19,7 +19,7 @@ class Connection
      */
     private function connect() //непостредственно устанавливает соединение с БД
     {
-        $config = require_once 'config.php';//подключаем конфиг
+        $config = (new \Engine\Core\Config\Config)->file('database');//подключаем конфиг
 
         $dsn = 'mysql:host='.$config['host'].';db_name='.$config['db_name'].';charset='.$config['charset'].';';
 
@@ -34,6 +34,7 @@ class Connection
      */
     public function execute($sql) //принимает sql запрос и выполняет его
     {
+        print_r($sql);
         $sth = $this->link->prepare($sql);//запись индификатора запроса
         return $sth->execute();
     }
@@ -46,7 +47,7 @@ class Connection
     {
         $exe = $this->execute($sql);
         $result = $exe->fetchAll(PDO::FETCH_ASSOC);
-
+        echo '<br>';
         if ($result === false)
         {
             return [];

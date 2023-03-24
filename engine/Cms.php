@@ -28,7 +28,7 @@ class Cms
     {
         try
         {
-            require_once __DIR__.'/../cms/Route.php'; //подключение route
+            require_once __DIR__.'/../'.mb_strtolower(ENV).'/Route.php'; //подключение route
 
             $routerDispatch = $this->router->dispatch(Common::getMethod(), Common::getPathUrl());
 
@@ -39,7 +39,7 @@ class Cms
 
             list($class, $action) = explode(':', $routerDispatch->getController(), 2);//разбивает массив по разделителю
 
-            $controller = '\\Cms\\Controller\\'.$class;
+            $controller = '\\'.ENV.'\\Controller\\'.$class;
             $parameters =  $routerDispatch->getParameters();
             call_user_func_array([new $controller($this->di), $action], $parameters);
         }
