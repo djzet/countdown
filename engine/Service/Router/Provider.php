@@ -7,14 +7,7 @@ use Engine\Core\Router\Router;
 
 class Provider extends AbstractProvider
 {
-    /**
-     * @var string
-     */
-    public $serviceName = 'router';
-
-    /**
-     * @return mixed|void
-     */
+    public string $serviceName = 'router';
     public function init()
     {
         $router = new Router('http://countdown.com/');

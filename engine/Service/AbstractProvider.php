@@ -1,26 +1,16 @@
 <?php
-
+// все провайдеры будуть автоматически получать зависимости
 namespace Engine\Service;
 use Engine\DI\DI;
 
 abstract class AbstractProvider
 {
-    /**
-     * @var\Engine\DI\DI;
-     */
-    protected $di; //хранит экземпляр класса DI
+    protected DI $di;
 
-
-    /**
-     * @param DI $di
-     */
-    public function __construct(\Engine\DI\DI $di)
+    public function __construct(DI $di)
     {
         $this->di = $di;
     }
 
-    /**
-     * @return mixed
-     */
-    abstract function init(); // должен содержать реализацию этого метода - инициализация нового сервиса
+    abstract function init();
 }

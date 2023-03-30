@@ -1,52 +1,19 @@
 <?php
-// запускает все приложение - точка запуска приложения
+// принимаеть в себя DI контеинер
 namespace Engine;
-use Engine\Core\Router\DispatchedRoute;
-use Engine\Helper\Common;
 class Cms
 {
-    /**
-     * @var
-     */
-    private $di; // cоздаем переменную
-
+    private $di;
     public $router;
-
-    /**
-     * @param $di
-     */
-    public function __construct($di) // сюда передаются все зависимости
+    public function __construct($di)
     {
         $this->di = $di;
-        $this->router = $this->di->get('router');//записали зависимость роутер в переменную роутер
+        $this->router = $this->di->get('router');
     }
-
-    /**
-     * @return void
-     */
-    public function run()// запуск приложения CMS
+    public function run(): void
     {
-        try
-        {
-            require_once __DIR__.'/../'.mb_strtolower(ENV).'/Route.php'; //подключение route
-
-            $routerDispatch = $this->router->dispatch(Common::getMethod(), Common::getPathUrl());
-
-            if ($routerDispatch == null)
-            {
-                $routerDispatch = new DispatchedRoute('ErrorController:page404');
-            }
-
-            list($class, $action) = explode(':', $routerDispatch->getController(), 2);//разбивает массив по разделителю
-
-            $controller = '\\'.ENV.'\\Controller\\'.$class;
-            $parameters =  $routerDispatch->getParameters();
-            call_user_func_array([new $controller($this->di), $action], $parameters);
-        }
-        catch (\Exception $e)
-        {
-            $e->getMessage();
-            exit();
-        }
+        //$this->router->add('home', '/', 'HomeController:index');
+        //$this->router->add('product', '/product/{id}', 'ProductController:index');
+        print_r($this->di);
     }
 }

@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="6e110170-f39b-49e0-8323-1333243ac1f2" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.htaccess" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/.htaccess" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/Assets/css/bootstrap-grid.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/Assets/css/bootstrap-grid.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/Assets/css/bootstrap-grid.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/Assets/css/bootstrap-grid.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/Assets/css/bootstrap-reboot.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/Assets/css/bootstrap-reboot.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/Assets/css/bootstrap-reboot.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/Assets/css/bootstrap-reboot.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/Assets/css/bootstrap.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/Assets/css/bootstrap.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/Assets/css/bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/Assets/css/bootstrap.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/Assets/css/dashboard.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/Assets/css/login.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/Assets/js/bootstrap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/Assets/js/bootstrap.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/Config/database.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/Config/main.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/Controller/AdminController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/Controller/DashboardController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/Controller/ErrorController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/Controller/LoginController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/Controller/PageController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/Controller/PostController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/Controller/SettingController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/Route.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/View/dashboard.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/View/login.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/index.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cms/Controller/CmsController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cms/Controller/ErrorController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cms/Controller/HomeController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cms/Route.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/themes/default/footer.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/themes/default/header.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/themes/default/index.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/engine/Cms.php" beforeDir="false" afterPath="$PROJECT_DIR$/engine/Cms.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/engine/Config/Service.php" beforeDir="false" afterPath="$PROJECT_DIR$/engine/Config/Service.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/engine/Controller.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/engine/Core/Auth/Auth.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/engine/Core/Auth/AuthInterface.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/engine/Core/Config/Config.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/engine/Core/Database/Connection.php" beforeDir="false" afterPath="$PROJECT_DIR$/engine/Core/Database/Connection.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/engine/Core/Request/Request.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/engine/Core/Router/DispatchedRoute.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/engine/Core/Router/Router.php" beforeDir="false" afterPath="$PROJECT_DIR$/engine/Core/Router/Router.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/engine/Core/Router/UrlDispatcher.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/engine/Core/Template/Theme.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/engine/Core/Template/View.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/engine/DI/DI.php" beforeDir="false" afterPath="$PROJECT_DIR$/engine/DI/DI.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/engine/Helper/Common.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/engine/Helper/Cookie.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/engine/Service/AbstractProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/engine/Service/AbstractProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/engine/Service/Config/Provider.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/engine/Service/Database/Provider.php" beforeDir="false" afterPath="$PROJECT_DIR$/engine/Service/Database/Provider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/engine/Service/Request/Provider.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/engine/Service/Router/Provider.php" beforeDir="false" afterPath="$PROJECT_DIR$/engine/Service/Router/Provider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/engine/Service/View/Provider.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/engine/bootstrap.php" beforeDir="false" afterPath="$PROJECT_DIR$/engine/bootstrap.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/autoload.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/autoload.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_real.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_real.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_static.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_static.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/installed.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/installed.php" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2NiM4hrvbSQ9hb6SZe8UkJ7ThVH" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "php.override.implement.member.chooser.php.doc": "NONE",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6e110170-f39b-49e0-8323-1333243ac1f2" name="Changes" comment="" />
+      <created>1680142274749</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1680142274749</updated>
+      <workItem from="1680142281006" duration="6861000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

@@ -1,28 +1,26 @@
 <?php
-//проверка для запуска приложения
+//проверка перед запуском cms
+require_once  __DIR__ . '/../vendor/autoload.php';
 
-require_once __DIR__.'/../vendor/autoload.php'; //подключаем auto loading
-
-use Engine\Cms; // импорт класса cms
-use Engine\DI\DI; // импорт класса DI
+use Engine\Cms;
+use Engine\DI\DI;
 
 try
 {
-    $di = new DI(); //создаем екземпляр класса DI
-    // если создадим зависимость они попадут в Сms
+    $di = new DI();
 
-    $services = require __DIR__.'/Config/Service.php'; //подключаем сервис
+    $services = require __DIR__ . '/Config/Service.php';
 
-    foreach ($services as $service) //проходим по конфигу, при каждом проходе цикла в провайдера будет записываться новый сервис
+    foreach ($services as $service)//инициализируем каждый сервис
     {
-         $provider = new $service($di);
-         $provider->init();
+        $provider = new $service($di);
+        $provider->init();
     }
 
-    $cms = new Cms($di); //создаем екземпляр класса cms
-    $cms->run();//вызов функции run
+    $cms = new Cms($di);
+    $cms->run();
 }
-catch (\ErrorException $e)// если исключение то выводим его
+catch (\ErrorException $e)
 {
     echo $e->getMessage();
 }

@@ -1,39 +1,21 @@
 <?php
-// DI - dependency injection - для внедрения зависимостей в наше систему
-namespace Engine\DI; //пространство имён , \Engine\DI\DI() - создание экземпляра класса, use \Engine\DI\DI - подключение класса
+// Dependency injection - Внедрение зависимости
+namespace Engine\DI;
 
-class DI // класс DI
+class DI
 {
-    /**
-     * @var array
-     */
-    private $container = []; // суда сохраняем все зависимости и получаем их
-
-    /**
-     * @param $key
-     * @param $value
-     * @return $this
-     */
-    public function set($key, $value) // добавляет зависимость в контеинер, принимает 2 параметра - ключ и значение
+    private array $container = []; // сюда сохраняем все зависимости и отсюда их берём
+    public function set($key, $value): static // устанавливает зависимость
     {
-        $this->container[$key] = $value; // устанавливаем значение по переданному ключу
-        return $this; // возвращяем это значение
-    }
+        $this->container[$key] = $value;
 
-    /**
-     * @param $key
-     * @return mixed|null
-     */
-    public function get($key) // возвращает с контеинера какую либо зависимость
+        return $this;
+    }
+    public function get($key) // получает зависимость
     {
         return $this->has($key);
     }
-
-    /**
-     * @param $key
-     * @return mixed|null
-     */
-    public function has($key)//проверка есть-ли ключ
+    public function has($key)// для проверки наличия ключа
     {
         return $this->container[$key] ?? null;
     }

@@ -1,57 +1,49 @@
 <?php
 
 namespace Engine\Core\Database;
-use \PDO;
+use PDO;
+
 class Connection
 {
-    /**
-     * @var
-     */
-    private $link; //сохранения соединения с БД
-
-    public function __construct() // работает при создание экземпляра класса
+    private $link;
+    public function __construct()
     {
         $this->connect();
     }
-
-    /**
-     * @return $this
-     */
-    private function connect() //непостредственно устанавливает соединение с БД
+    private function connect(): void
     {
-        $config = (new \Engine\Core\Config\Config)->file('database');//подключаем конфиг
+        $config =
+                [
+                    'host' => 'localhost',
+                    'db_name' => 'cms',
+                    'username' => 'root',
+                    'password' => '',
+                ];
 
-        $dsn = 'mysql:host='.$config['host'].';db_name='.$config['db_name'].';charset='.$config['charset'].';';
+        $dsn = 'mysql:host='.$config['host'].';dbname='.$config['db_name'].';';
 
-        $this->link = new PDO($dsn, $config['username'], $config['password']);//$dsn - содержит инфу для подключения к БД, $username- имя user, $password - пароль user
+        $this->link = new PDO($dsn, $config['username'], $config['password']);
 
-        return $this;
     }
-
-    /**
-     * @param $sql
-     * @return mixed
-     */
-    public function execute($sql) //принимает sql запрос и выполняет его
+    public function execute($sql)
     {
-        print_r($sql);
-        $sth = $this->link->prepare($sql);//запись индификатора запроса
+        $sth = $this->link->prepare($sql);
+
         return $sth->execute();
     }
-
-    /**
-     * @param $sql
-     * @return array
-     */
-    public function query($sql) //принимает sql запрос и выполняет его
+    public function query($sql)
     {
-        $exe = $this->execute($sql);
-        $result = $exe->fetchAll(PDO::FETCH_ASSOC);
-        echo '<br>';
+        $sth = $this->link->prepare($sql);
+
+        $sth->execute();
+
+        $result = $sth->fetchAll(PDO::FETCH_ASSOC);
+
         if ($result === false)
         {
             return [];
         }
+
         return $result;
     }
 }
