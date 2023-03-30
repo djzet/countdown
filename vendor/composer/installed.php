@@ -3,7 +3,7 @@
         'name' => 'silaev/countdown',
         'pretty_version' => 'dev-master',
         'version' => 'dev-master',
-        'reference' => 'c81828a4eb0398ac7187c7fbead0b6592e613924',
+        'reference' => 'fc2422b073e0ae85621918e5f81db615a217aa98',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -13,7 +13,7 @@
         'silaev/countdown' => array(
             'pretty_version' => 'dev-master',
             'version' => 'dev-master',
-            'reference' => 'c81828a4eb0398ac7187c7fbead0b6592e613924',
+            'reference' => 'fc2422b073e0ae85621918e5f81db615a217aa98',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
