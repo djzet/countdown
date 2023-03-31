@@ -1,24 +1,28 @@
 <?php
 
 namespace Engine\Core\Database;
+use Exception;
 use PDO;
+use Engine\Core\Config\Config;
 
 class Connection
 {
     private $link;
+
+    /**
+     * @throws Exception
+     */
     public function __construct()
     {
         $this->connect();
     }
+
+    /**
+     * @throws Exception
+     */
     private function connect(): void
     {
-        $config =
-                [
-                    'host' => 'localhost',
-                    'db_name' => 'cms',
-                    'username' => 'root',
-                    'password' => '',
-                ];
+        $config = Config::file('database');
 
         $dsn = 'mysql:host='.$config['host'].';dbname='.$config['db_name'].';';
 

@@ -4,14 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6e110170-f39b-49e0-8323-1333243ac1f2" name="Changes" comment="is still working + sample">
-      <change afterPath="$PROJECT_DIR$/engine/Helper/Cookie.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/engine/Service/Config/Provider.php" afterDir="false" />
+    <list default="true" id="6e110170-f39b-49e0-8323-1333243ac1f2" name="Changes" comment="still continues to work, but since there is no config in cms main does not work">
+      <change afterPath="$PROJECT_DIR$/engine/Core/Auth/Auth.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/engine/Core/Auth/AuthInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/engine/Core/Request/Request.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/engine/Service/Request/Provider.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/Config/database.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/Config/database.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/Controller/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/Controller/AdminController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/Controller/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/Controller/LoginController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/Route.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/Route.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/View/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/View/login.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/engine/Config/Service.php" beforeDir="false" afterPath="$PROJECT_DIR$/engine/Config/Service.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/engine/Controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/engine/Controller.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/engine/Core/Config/Config.php" beforeDir="false" afterPath="$PROJECT_DIR$/engine/Core/Config/Config.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/engine/Core/Database/Connection.php" beforeDir="false" afterPath="$PROJECT_DIR$/engine/Core/Database/Connection.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/engine/Core/Template/View.php" beforeDir="false" afterPath="$PROJECT_DIR$/engine/Core/Template/View.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/engine/Helper/Cookie.php" beforeDir="false" afterPath="$PROJECT_DIR$/engine/Helper/Cookie.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/engine/Service/Config/Provider.php" beforeDir="false" afterPath="$PROJECT_DIR$/engine/Service/Config/Provider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/engine/bootstrap.php" beforeDir="false" afterPath="$PROJECT_DIR$/engine/bootstrap.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,7 +85,7 @@
       <workItem from="1680142281006" duration="12735000" />
       <workItem from="1680184940626" duration="672000" />
       <workItem from="1680226155000" duration="9960000" />
-      <workItem from="1680263915662" duration="2534000" />
+      <workItem from="1680263915662" duration="7913000" />
     </task>
     <task id="LOCAL-00001" summary="works">
       <created>1680149550185</created>
@@ -105,7 +115,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680236200701</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="still continues to work, but since there is no config in cms main does not work">
+      <created>1680266555694</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1680266555694</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -127,6 +144,7 @@
     <MESSAGE value="still working" />
     <MESSAGE value="is still working" />
     <MESSAGE value="is still working + sample" />
-    <option name="LAST_COMMIT_MESSAGE" value="is still working + sample" />
+    <MESSAGE value="still continues to work, but since there is no config in cms main does not work" />
+    <option name="LAST_COMMIT_MESSAGE" value="still continues to work, but since there is no config in cms main does not work" />
   </component>
 </project>

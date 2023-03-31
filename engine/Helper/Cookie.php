@@ -10,11 +10,7 @@ class Cookie
     }
     public static function get($key)
     {
-        if (isset($_COOKIE[$key]))
-        {
-            return $_COOKIE[$key];
-        }
-        return null;
+        return $_COOKIE[$key] ?? null;
     }
     public static function delete($key): void
     {

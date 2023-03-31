@@ -3,6 +3,9 @@
 namespace Engine\Core\Template;
 
 use Engine\Core\Template\Theme;
+use ErrorException;
+use InvalidArgumentException;
+
 class View
 {
     protected \Engine\Core\Template\Theme $theme;
@@ -16,7 +19,7 @@ class View
 
         if (!is_file($templatePath))
         {
-            throw new \InvalidArgumentException(sprintf('Template "%s" not found in "%s"', $template, $templatePath));
+            throw new InvalidArgumentException(sprintf('Template "%s" not found in "%s"', $template, $templatePath));
         }
 
         $this->theme->setData($vars);
@@ -29,7 +32,7 @@ class View
         {
             require_once $templatePath;
         }
-        catch (\ErrorException $e)
+        catch (ErrorException $e)
         {
             ob_end_clean();//очистка буффера
             throw $e;

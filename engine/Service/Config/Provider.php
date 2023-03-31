@@ -16,7 +16,7 @@ class Provider extends AbstractProvider
     public function init()
     {
         $config['main'] = Config::file('main');
-        $config['database'] = Config::file('database');
+        //$config['database'] = Config::file('database');
 
         $this->di->set($this->serviceName, $config);
     }
