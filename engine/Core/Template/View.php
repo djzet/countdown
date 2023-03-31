@@ -12,7 +12,7 @@ class View
     }
     public function render($template, $vars = []): void
     {
-        $templatePath = ROOT_DIR . '/content/themes/default/' . $template . '.php';
+        $templatePath = $this->getTemplatePath($template, ENV);
 
         if (!is_file($templatePath))
         {
@@ -35,5 +35,15 @@ class View
             throw $e;
         }
         echo ob_get_clean();//получает содержимое текущего буффера
+    }
+
+    private function getTemplatePath($template, $env = null): string
+    {
+        //тот же самый switch case
+        return match ($env) {
+            'Admin' => ROOT_DIR . '/View/' . $template . '.php',
+            'Cms' => ROOT_DIR . '/content/Themes/default/' . $template . '.php',
+            default => ROOT_DIR . '/' . mb_strtolower($env) . '/View/' . $template . '.php',
+        };
     }
 }
