@@ -2,6 +2,7 @@
 // принимаеть в себя DI контеинер
 namespace Engine;
 
+use Engine\Core\Router\DispatchedRoute;
 use Engine\Helper\Common;
 class Cms
 {
@@ -14,16 +15,31 @@ class Cms
     }
     public function run(): void
     {
-        $this->router->add('home', '/', 'HomeController:index');
-        $this->router->add('news', '/news', 'HomeController:news');
+        try
+        {
+            require_once __DIR__ . '/../' .mb_strtolower(ENV). '/Route.php';
 
-        $routerDispatch = $this->router->dispatch(Common::getMethod(), Common::getPathUrl());
+            $routerDispatch = $this->router->dispatch(Common::getMethod(), Common::getPathUrl());
 
-        list($class, $action) = explode(':', $routerDispatch->getController(), 2);//explode - из строки создает массив
+            if ($routerDispatch == null)
+            {
+                $routerDispatch = new DispatchedRoute('ErrorController:page404');
+            }
 
-        $controller = '\\Cms\\Controller\\' . $class;
-        call_user_func_array([new $controller($this->di), $action], $routerDispatch->getParameters());
+            list($class, $action) = explode(':', $routerDispatch->getController(), 2);//explode - из строки создает массив
 
-        //print_r($routerDispatch);
+            $controller = '\\' .ENV. '\\Controller\\' . $class;
+            $parameters = $routerDispatch->getParameters();
+
+            call_user_func_array([new $controller($this->di), $action], $parameters);
+
+        }
+        catch (\ErrorException $e)
+        {
+            echo $e->getMessage();
+            exit();
+        }
+
+
     }
 }

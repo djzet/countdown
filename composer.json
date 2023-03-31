@@ -4,6 +4,7 @@
         "psr-4": {
             "Engine\\": "engine",
             "Cms\\": "cms",
+            "Admin\\": "admin",
             "Engine\\DI\\": "engine/DI"
         }
     },
@@ -13,5 +14,8 @@
             "email": "silaevegor2003@mail.ru"
         }
     ],
-    "require": {}
+    "require": {
+      "ext-pdo": "*",
+      "ext-mbstring": "*"
+    }
 }

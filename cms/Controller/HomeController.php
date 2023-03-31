@@ -2,21 +2,15 @@
 
 namespace Cms\Controller;
 
-use Engine\Controller;
-
-class HomeController extends Controller
+class HomeController extends CmsController
 {
-    public function __construct($di)
-    {
-        parent::__construct($di);//у нашего контроллера абстрактного есть контроллер и мы его наследуем для повторного использования
-    }
-
     public function index()
     {
-        echo 'Index page';
+        $data = ['name' => 'Tur'];
+        $this->view->render('index', $data);
     }
-    public function news()
+    public function news($id)
     {
-        echo 'News page';
+        echo $id;
     }
 }

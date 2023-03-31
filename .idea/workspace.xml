@@ -4,17 +4,33 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6e110170-f39b-49e0-8323-1333243ac1f2" name="Changes" comment="works">
-      <change afterPath="$PROJECT_DIR$/.htaccess" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cms/Controller/HomeController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/engine/Controller.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/engine/Core/Router/DispatchedRoute.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/engine/Core/Router/UrlDispatcher.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/engine/Helper/Common.php" afterDir="false" />
+    <list default="true" id="6e110170-f39b-49e0-8323-1333243ac1f2" name="Changes" comment="still working">
+      <change afterPath="$PROJECT_DIR$/admin/.htaccess" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/Controller/AdminController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/Controller/DashboardController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/Controller/ErrorController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/Controller/LoginController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/Route.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/index.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cms/Controller/CmsController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cms/Controller/ErrorController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cms/Route.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/themes/default/footer.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/themes/default/header.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/themes/default/index.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/engine/Core/Template/Theme.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/engine/Core/Template/View.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/engine/Service/View/Provider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cms/Controller/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/cms/Controller/HomeController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/engine/Cms.php" beforeDir="false" afterPath="$PROJECT_DIR$/engine/Cms.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/engine/Core/Router/Router.php" beforeDir="false" afterPath="$PROJECT_DIR$/engine/Core/Router/Router.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/engine/Config/Service.php" beforeDir="false" afterPath="$PROJECT_DIR$/engine/Config/Service.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/engine/Controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/engine/Controller.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/engine/Core/Router/UrlDispatcher.php" beforeDir="false" afterPath="$PROJECT_DIR$/engine/Core/Router/UrlDispatcher.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_static.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_static.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vendor/composer/installed.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/installed.php" afterDir="false" />
@@ -24,7 +40,8 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings">
+  <component name="ComposerSettings" doNotAsk="true">
+    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
   </component>
   <component name="Git.Settings">
@@ -32,6 +49,11 @@
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration">
+    <include_path>
+      <path value="$PROJECT_DIR$/vendor/composer" />
+    </include_path>
   </component>
   <component name="ProjectId" id="2NiM4hrvbSQ9hb6SZe8UkJ7ThVH" />
   <component name="ProjectLevelVcsManager">
@@ -46,6 +68,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/xampp/htdocs/countdown/admin",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -56,6 +79,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\countdown\content\themes\default" />
       <recent name="C:\xampp\htdocs\countdown" />
     </key>
   </component>
@@ -67,7 +91,9 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1680142274749</updated>
-      <workItem from="1680142281006" duration="12557000" />
+      <workItem from="1680142281006" duration="12735000" />
+      <workItem from="1680184940626" duration="672000" />
+      <workItem from="1680226155000" duration="7886000" />
     </task>
     <task id="LOCAL-00001" summary="works">
       <created>1680149550185</created>
@@ -76,7 +102,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680149550185</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="still working">
+      <created>1680155193004</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1680155193004</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -95,6 +128,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="works" />
-    <option name="LAST_COMMIT_MESSAGE" value="works" />
+    <MESSAGE value="still working" />
+    <option name="LAST_COMMIT_MESSAGE" value="still working" />
   </component>
 </project>

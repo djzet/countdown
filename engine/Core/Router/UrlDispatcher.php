@@ -30,7 +30,31 @@ class UrlDispatcher
     }
     public function register($method, $pattern, $controller): void//регистрирует наши роуты
     {
-        $this->routes[strtoupper($method)][$pattern] = $controller;
+        $convert = $this->convertPattern($pattern);
+        $this->routes[strtoupper($method)][$convert] = $controller;
+    }
+    private function convertPattern($pattern)
+    {
+        if (!str_contains($pattern, '('))//ищет совпадение в строке
+        {
+            return $pattern;
+        }
+        return preg_replace_callback(pattern: '#\((\w+):(\w+)\)#', callback: [$this, 'replacePattern'], subject: $pattern);
+    }
+    private function replacePattern($matches): string
+    {
+        return '(?<' .$matches[1]. '>' .strtr($matches[2], $this->patterns). ')';
+    }
+    private function processParam($parameters)
+    {
+        foreach ($parameters as $key => $value)
+        {
+            if (is_int($key))
+            {
+                unset($parameters[$key]);
+            }
+        }
+        return $parameters;
     }
     public function dispatch($method, $uri): ?DispatchedRoute
     {
@@ -46,11 +70,11 @@ class UrlDispatcher
     {
         foreach ($this->routes($method) as $route => $controller)
         {
-            $pattern = '#^' . $route . '$#s';
+            $pattern = sprintf("#^%s\$#s", $route);
 
             if (preg_match($pattern, $uri, $parameters))
             {
-                return new DispatchedRoute($controller, $parameters);
+                return new DispatchedRoute($controller,  $this->processParam($parameters));
             }
         }
         return null;
