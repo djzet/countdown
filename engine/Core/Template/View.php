@@ -39,11 +39,11 @@ class View
 
     private function getTemplatePath($template, $env = null): string
     {
-        //тот же самый switch case
-        return match ($env) {
-            'Admin' => ROOT_DIR . '/View/' . $template . '.php',
-            'Cms' => ROOT_DIR . '/content/Themes/default/' . $template . '.php',
-            default => ROOT_DIR . '/' . mb_strtolower($env) . '/View/' . $template . '.php',
-        };
+        if($env == 'Cms')
+        {
+            return ROOT_DIR . '/content/themes/default/' . $template . '.php';
+        }
+
+        return ROOT_DIR . '/View/' . $template . '.php';
     }
 }
