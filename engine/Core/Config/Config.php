@@ -23,21 +23,15 @@ class Config
     {
         $path = $_SERVER['DOCUMENT_ROOT'] . '/' . mb_strtolower(ENV) . '/Config/' . $group . '.php';
 
-        if (file_exists($path))
-        {
+        if (file_exists($path)) {
             $items = require_once $path;
 
-            if (is_array($items))
-            {
+            if (is_array($items)) {
                 return $items;
-            }
-            else
-            {
+            } else {
                 throw new Exception(sprintf('Config file "%s" is not valid array.', $path));
             }
-        }
-        else
-        {
+        } else {
             throw new Exception(sprintf('Cannot load config from file, file "%s" does not exist.', $path));
         }
         return false;

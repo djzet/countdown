@@ -16,14 +16,17 @@
     <link href="/admin/Assets/css/dashboard.css" rel="stylesheet">
 
     <!-- simplelineicons for this template -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.css">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.css">
 </head>
 
 <body>
 <header>
     <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
         <div class="container">
-            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+                    data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                    aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <a class="navbar-brand" href="#">Admin CMS</a>
@@ -53,7 +56,7 @@
             </div>
 
             <div class="right-toolbar">
-                <a href="#">
+                <a href="/admin/logout">
                     <i class="icon-logout icons"></i> Logout
                 </a>
             </div>
@@ -66,7 +69,7 @@
         <br><br><br>
         <div style="text-align:center;">
             <h1><i class="icon-heart icons"></i> Welcome to CMS</h1>
-            Watch on channel  <a href="https://www.youtube.com/channel/UCOy440HnmqURkjG9CrBi6nw?disable_polymer=true">
+            Watch on channel <a href="https://www.youtube.com/channel/UCOy440HnmqURkjG9CrBi6nw?disable_polymer=true">
                 <i class="icon-social-youtube icons"></i> Developer Start
             </a>
         </div>

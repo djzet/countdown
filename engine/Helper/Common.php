@@ -6,16 +6,17 @@ class Common
 {
     function isPost(): bool
     {
-        if ($_SERVER['REQUEST_METHOD'] == 'POST')
-        {
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             return true;
         }
         return false;
     }
+
     static function getMethod()//получает метод
     {
         return $_SERVER['REQUEST_METHOD'];
     }
+
     static function getPathUrl()//получает путь
     {
         $pathUrl = $_SERVER['REQUEST_URI'];

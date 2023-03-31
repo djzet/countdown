@@ -8,14 +8,15 @@ class Cookie
     {
         setcookie($key, $value, time() + $time, '/');
     }
+
     public static function get($key)
     {
         return $_COOKIE[$key] ?? null;
     }
+
     public static function delete($key): void
     {
-        if (isset($_COOKIE[$key]))
-        {
+        if (isset($_COOKIE[$key])) {
             self::set($key, '', -3600);
             unset($_COOKIE[$key]);
         }

@@ -4,23 +4,51 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6e110170-f39b-49e0-8323-1333243ac1f2" name="Changes" comment="still continues to work, but since there is no config in cms main does not work">
-      <change afterPath="$PROJECT_DIR$/engine/Core/Auth/Auth.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/engine/Core/Auth/AuthInterface.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/engine/Core/Request/Request.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/engine/Service/Request/Provider.php" afterDir="false" />
+    <list default="true" id="6e110170-f39b-49e0-8323-1333243ac1f2" name="Changes" comment="cookies are being recorded, let's see what happens next">
+      <change afterPath="$PROJECT_DIR$/engine/Core/Database/QueryBuilder.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/Config/database.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/Config/database.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/Assets/css/bootstrap-grid.css" beforeDir="false" afterPath="$PROJECT_DIR$/admin/Assets/css/bootstrap-grid.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/Assets/css/bootstrap-grid.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/admin/Assets/css/bootstrap-grid.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/Assets/css/bootstrap-grid.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/admin/Assets/css/bootstrap-grid.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/Assets/css/bootstrap-grid.min.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/admin/Assets/css/bootstrap-grid.min.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/Assets/css/bootstrap-reboot.css" beforeDir="false" afterPath="$PROJECT_DIR$/admin/Assets/css/bootstrap-reboot.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/Assets/css/bootstrap-reboot.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/admin/Assets/css/bootstrap-reboot.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/Assets/css/bootstrap-reboot.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/admin/Assets/css/bootstrap-reboot.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/Assets/css/bootstrap-reboot.min.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/admin/Assets/css/bootstrap-reboot.min.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/Assets/css/bootstrap.css" beforeDir="false" afterPath="$PROJECT_DIR$/admin/Assets/css/bootstrap.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/Assets/css/bootstrap.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/admin/Assets/css/bootstrap.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/Assets/css/bootstrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/admin/Assets/css/bootstrap.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/Assets/css/bootstrap.min.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/admin/Assets/css/bootstrap.min.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/Assets/css/dashboard.css" beforeDir="false" afterPath="$PROJECT_DIR$/admin/Assets/css/dashboard.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/Assets/css/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/admin/Assets/css/login.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/Assets/js/bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/admin/Assets/js/bootstrap.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/Assets/js/bootstrap.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/admin/Assets/js/bootstrap.min.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/Controller/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/Controller/AdminController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/Controller/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/Controller/LoginController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/Route.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/Route.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/View/dashboard.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/View/dashboard.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/View/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/View/login.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/engine/Config/Service.php" beforeDir="false" afterPath="$PROJECT_DIR$/engine/Config/Service.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cms/Controller/CmsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/cms/Controller/CmsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cms/Controller/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/cms/Controller/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/engine/Cms.php" beforeDir="false" afterPath="$PROJECT_DIR$/engine/Cms.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/engine/Controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/engine/Controller.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/engine/Core/Auth/Auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/engine/Core/Auth/Auth.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/engine/Core/Config/Config.php" beforeDir="false" afterPath="$PROJECT_DIR$/engine/Core/Config/Config.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/engine/Core/Database/Connection.php" beforeDir="false" afterPath="$PROJECT_DIR$/engine/Core/Database/Connection.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/engine/Core/Request/Request.php" beforeDir="false" afterPath="$PROJECT_DIR$/engine/Core/Request/Request.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/engine/Core/Router/DispatchedRoute.php" beforeDir="false" afterPath="$PROJECT_DIR$/engine/Core/Router/DispatchedRoute.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/engine/Core/Router/Router.php" beforeDir="false" afterPath="$PROJECT_DIR$/engine/Core/Router/Router.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/engine/Core/Router/UrlDispatcher.php" beforeDir="false" afterPath="$PROJECT_DIR$/engine/Core/Router/UrlDispatcher.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/engine/Core/Template/View.php" beforeDir="false" afterPath="$PROJECT_DIR$/engine/Core/Template/View.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/engine/DI/DI.php" beforeDir="false" afterPath="$PROJECT_DIR$/engine/DI/DI.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/engine/Helper/Common.php" beforeDir="false" afterPath="$PROJECT_DIR$/engine/Helper/Common.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/engine/Helper/Cookie.php" beforeDir="false" afterPath="$PROJECT_DIR$/engine/Helper/Cookie.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/engine/Service/Config/Provider.php" beforeDir="false" afterPath="$PROJECT_DIR$/engine/Service/Config/Provider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/engine/Service/AbstractProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/engine/Service/AbstractProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/engine/Service/Database/Provider.php" beforeDir="false" afterPath="$PROJECT_DIR$/engine/Service/Database/Provider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/engine/Service/Router/Provider.php" beforeDir="false" afterPath="$PROJECT_DIR$/engine/Service/Router/Provider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/engine/Service/View/Provider.php" beforeDir="false" afterPath="$PROJECT_DIR$/engine/Service/View/Provider.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/engine/bootstrap.php" beforeDir="false" afterPath="$PROJECT_DIR$/engine/bootstrap.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -85,7 +113,7 @@
       <workItem from="1680142281006" duration="12735000" />
       <workItem from="1680184940626" duration="672000" />
       <workItem from="1680226155000" duration="9960000" />
-      <workItem from="1680263915662" duration="7913000" />
+      <workItem from="1680263915662" duration="16802000" />
     </task>
     <task id="LOCAL-00001" summary="works">
       <created>1680149550185</created>
@@ -122,7 +150,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680266555694</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="cookies are being recorded, let's see what happens next">
+      <created>1680272055985</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1680272055985</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -145,6 +180,7 @@
     <MESSAGE value="is still working" />
     <MESSAGE value="is still working + sample" />
     <MESSAGE value="still continues to work, but since there is no config in cms main does not work" />
-    <option name="LAST_COMMIT_MESSAGE" value="still continues to work, but since there is no config in cms main does not work" />
+    <MESSAGE value="cookies are being recorded, let's see what happens next" />
+    <option name="LAST_COMMIT_MESSAGE" value="cookies are being recorded, let's see what happens next" />
   </component>
 </project>

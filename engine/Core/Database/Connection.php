@@ -1,6 +1,7 @@
 <?php
 
 namespace Engine\Core\Database;
+
 use Exception;
 use PDO;
 use Engine\Core\Config\Config;
@@ -24,27 +25,28 @@ class Connection
     {
         $config = Config::file('database');
 
-        $dsn = 'mysql:host='.$config['host'].';dbname='.$config['db_name'].';';
+        $dsn = 'mysql:host=' . $config['host'] . ';dbname=' . $config['db_name'] . ';';
 
         $this->link = new PDO($dsn, $config['username'], $config['password']);
 
     }
-    public function execute($sql)
+
+    public function execute($sql, $values = [])
     {
         $sth = $this->link->prepare($sql);
 
-        return $sth->execute();
+        return $sth->execute($values);
     }
-    public function query($sql)
+
+    public function query($sql, $values = [])
     {
         $sth = $this->link->prepare($sql);
 
-        $sth->execute();
+        $sth->execute($values);
 
         $result = $sth->fetchAll(PDO::FETCH_ASSOC);
 
-        if ($result === false)
-        {
+        if ($result === false) {
             return [];
         }
 

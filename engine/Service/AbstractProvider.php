@@ -1,6 +1,7 @@
 <?php
 // все провайдеры будуть автоматически получать зависимости
 namespace Engine\Service;
+
 use Engine\DI\DI;
 
 abstract class AbstractProvider
