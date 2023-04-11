@@ -1,5 +1,10 @@
 <?php
-const ROOT_DIR = __DIR__;
-const ENV = 'Cms';
+ini_set("display_errors",1);
+error_reporting(E_ALL);
 
-require_once 'engine/bootstrap.php';
+const ROOT_DIR = __DIR__;
+
+const ENV = 'Cms';
+const DS = DIRECTORY_SEPARATOR;
+
+require_once 'engine/Bootstrap.php';

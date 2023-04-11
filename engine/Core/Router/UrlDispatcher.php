@@ -4,82 +4,132 @@ namespace Engine\Core\Router;
 
 class UrlDispatcher
 {
-    private array $method =
-        [
-            'GET',
-            'POST'
-        ];//хранить массив с типами методов
-    private array $routes =
-        [
-            'GET' => [],
-            'POST' => []
-        ];
-    private array $patterns =
-        [
-            'int' => '[0-9]+',
-            'str' => '[a-zA-Z\.\-_%]+',
-            'any' => '[a-zA-Z0-9\.\-_%]+'
-        ];
+    /**
+     * @var array
+     */
+    private $methods = [
+        'GET',
+        'POST'
+    ];
 
-    public function addPattern($key, $pattern): void//функция добавления патерна
+    /**
+     * @var array
+     */
+    private $routes = [
+        'GET'  => [],
+        'POST' => []
+    ];
+
+    /**
+     * @var array
+     */
+    private $patterns = [
+        'int' => '[0-9]+',
+        'str' => '[a-zA-Z\.\-_%]+',
+        'any' => '[a-zA-Z0-9\.\-_%]+'
+    ];
+
+    /**
+     * @param $key
+     * @param $pattern
+     */
+    public function addPattern($key, $pattern)
     {
         $this->patterns[$key] = $pattern;
     }
 
-    private function routes($method)//проверка существование роутера
+    /**
+     * @param $method
+     * @return array|mixed
+     */
+    private function routes($method)
     {
-        return $this->routes[$method] ?? [];
+        return isset($this->routes[$method]) ? $this->routes[$method] : [];
     }
 
-    public function register($method, $pattern, $controller): void//регистрирует наши роуты
+    /**
+     * @param $method
+     * @param $pattern
+     * @param $controller
+     */
+    public function register($method, $pattern, $controller)
     {
         $convert = $this->convertPattern($pattern);
         $this->routes[strtoupper($method)][$convert] = $controller;
     }
 
+    /**
+     * @param $pattern
+     * @return mixed
+     */
     private function convertPattern($pattern)
     {
-        if (!str_contains($pattern, '('))//ищет совпадение в строке
+        if(strpos($pattern, '(') === false)
         {
             return $pattern;
         }
-        return preg_replace_callback(pattern: '#\((\w+):(\w+)\)#', callback: [$this, 'replacePattern'], subject: $pattern);
+
+        return preg_replace_callback('#\((\w+):(\w+)\)#', [$this, 'replacePattern'], $pattern);
     }
 
-    private function replacePattern($matches): string
+    /**
+     * @param $matches
+     * @return string
+     */
+    private function replacePattern($matches)
     {
-        return '(?<' . $matches[1] . '>' . strtr($matches[2], $this->patterns) . ')';
+        return '(?<' .$matches[1]. '>'. strtr($matches[2], $this->patterns) .')';
     }
 
+    /**
+     * @param $parameters
+     * @return mixed
+     */
     private function processParam($parameters)
     {
-        foreach ($parameters as $key => $value) {
-            if (is_int($key)) {
+        foreach($parameters as $key => $value)
+        {
+            if(is_int($key))
+            {
                 unset($parameters[$key]);
             }
         }
+
         return $parameters;
     }
 
-    public function dispatch($method, $uri): ?DispatchedRoute
+    /**
+     * @param $method
+     * @param $uri
+     * @return DispatchedRoute|void
+     */
+    public function dispatch($method, $uri)
     {
         $routes = $this->routes(strtoupper($method));
 
-        if (array_key_exists($uri, $routes)) {
+        if(array_key_exists($uri, $routes))
+        {
             return new DispatchedRoute($routes[$uri]);
         }
+
         return $this->doDispatch($method, $uri);
     }
 
-    private function doDispatch($method, $uri): ?DispatchedRoute
+    /**
+     * @param $method
+     * @param $uri
+     * @return DispatchedRoute
+     */
+    private function doDispatch($method, $uri)
     {
-        foreach ($this->routes($method) as $route => $controller) {
-            $pattern = sprintf("#^%s\$#s", $route);
+        foreach($this->routes($method) as $route => $controller)
+        {
+            $pattern = '#^' . $route . '$#s';
 
-            if (preg_match($pattern, $uri, $parameters)) {
+            if(preg_match($pattern, $uri, $parameters))
+            {
                 return new DispatchedRoute($controller, $this->processParam($parameters));
             }
         }
-        return null;
     }
 }

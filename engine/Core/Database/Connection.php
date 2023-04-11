@@ -2,16 +2,19 @@
 
 namespace Engine\Core\Database;
 
-use Exception;
-use PDO;
+use \PDO;
 use Engine\Core\Config\Config;
 
+/**
+ * Class Connection
+ * @package Engine\Core\Database
+ */
 class Connection
 {
     private $link;
 
     /**
-     * @throws Exception
+     * Connection constructor.
      */
     public function __construct()
     {
@@ -19,18 +22,24 @@ class Connection
     }
 
     /**
-     * @throws Exception
+     * @return $this
      */
-    private function connect(): void
+    private function connect()
     {
-        $config = Config::file('database');
+        $config = Config::group('database');
 
-        $dsn = 'mysql:host=' . $config['host'] . ';dbname=' . $config['db_name'] . ';';
+        $dsn = 'mysql:host=' .$config['host'] .';dbname=' .$config['db_name'] .';charset=' .$config['charset'];
 
         $this->link = new PDO($dsn, $config['username'], $config['password']);
 
+        return $this;
     }
 
+    /**
+     * @param $sql
+     * @param array $values
+     * @return mixed
+     */
     public function execute($sql, $values = [])
     {
         $sth = $this->link->prepare($sql);
@@ -38,18 +47,32 @@ class Connection
         return $sth->execute($values);
     }
 
-    public function query($sql, $values = [])
+    /**
+     * @param $sql
+     * @param array $values
+     * @param int $statement
+     * @return array
+     */
+    public function query($sql, $values = [], $statement = PDO::FETCH_OBJ)
     {
         $sth = $this->link->prepare($sql);
 
         $sth->execute($values);
 
-        $result = $sth->fetchAll(PDO::FETCH_ASSOC);
+        $result = $sth->fetchAll($statement);
 
-        if ($result === false) {
+        if($result === false){
             return [];
         }
 
         return $result;
+    }
+
+    /**
+     * @return int
+     */
+    public function lastInsertId()
+    {
+        return $this->link->lastInsertId();
     }
 }

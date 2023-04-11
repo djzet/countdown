@@ -1,3 +1,6 @@
 <?php
-//список роутов
+/**
+ * List routes
+ */
+
 $this->router->add('home', '/', 'HomeController:index');

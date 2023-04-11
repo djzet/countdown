@@ -7,8 +7,15 @@ use Engine\Core\Database\Connection;
 
 class Provider extends AbstractProvider
 {
-    public string $serviceName = 'db';
 
+    /**
+     * @var string
+     */
+    public $serviceName = 'db';
+
+    /**
+     * @return mixed
+     */
     public function init()
     {
         $db = new Connection();

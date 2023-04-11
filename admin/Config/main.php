@@ -1,6 +1,6 @@
 <?php
-
-return
-    [
-        'base_url' => ''
-    ];
+return [
+    'baseUrl'        => 'http://cms.loc',
+    'defaultLang'     => 'english',
+    'defaultTimezone' => 'America/Chicago'
+];

@@ -4,32 +4,50 @@ namespace Admin\Controller;
 
 use Engine\Controller;
 use Engine\Core\Auth\Auth;
-use JetBrains\PhpStorm\NoReturn;
 
 class AdminController extends Controller
 {
-    protected Auth $auth;
+    /**
+     * @var Auth
+     */
+    protected $auth;
 
+    /**
+     * @var array
+     */
+    public $data = [];
+
+    /**
+     * AdminController constructor.
+     * @param \Engine\DI\DI $di
+     */
     public function __construct($di)
     {
-        parent::__construct($di);//у нашего контроллера абстрактного есть контроллер и мы его наследуем для повторного использования
+        parent::__construct($di);
 
         $this->auth = new Auth();
 
         if ($this->auth->hashUser() == null) {
-            header('Location: /admin/login');
-            exit();
+            header('Location: /admin/login/');
+            exit;
         }
+
+        // Load global language
+        $this->load->language('dashboard/menu');
     }
 
+    /**
+     * Check Auth
+     */
     public function checkAuthorization()
     {
 
     }
-    #[NoReturn] public function logout()
+
+    public function logout()
     {
         $this->auth->unAuthorize();
-        header('Location: /admin/login');
-        exit();
+        header('Location: /admin/login/');
+        exit;
     }
 }

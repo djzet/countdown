@@ -4,9 +4,198 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6e110170-f39b-49e0-8323-1333243ac1f2" name="Changes" comment="cookies are being recorded, let's see what happens next">
-      <change afterPath="$PROJECT_DIR$/engine/Core/Database/QueryBuilder.php" afterDir="false" />
+    <list default="true" id="761b6a15-25ae-4086-83b3-b44a6144a1db" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/Assets/images/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/Assets/js/init.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/Assets/js/jquery-2.0.3.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/Assets/js/jquery-sortable.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/Assets/js/menu.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/Assets/js/page.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/Assets/js/plugins/redactor/lang/ar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/Assets/js/plugins/redactor/lang/az.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/Assets/js/plugins/redactor/lang/ba.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/Assets/js/plugins/redactor/lang/bg.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/Assets/js/plugins/redactor/lang/by.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/Assets/js/plugins/redactor/lang/ca.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/Assets/js/plugins/redactor/lang/cs.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/Assets/js/plugins/redactor/lang/da.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/Assets/js/plugins/redactor/lang/de.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/Assets/js/plugins/redactor/lang/el.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/Assets/js/plugins/redactor/lang/eo.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/Assets/js/plugins/redactor/lang/es.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/Assets/js/plugins/redactor/lang/es_ar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/Assets/js/plugins/redactor/lang/fa.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/Assets/js/plugins/redactor/lang/fi.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/Assets/js/plugins/redactor/lang/fr.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/Assets/js/plugins/redactor/lang/ge.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/Assets/js/plugins/redactor/lang/he.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/Assets/js/plugins/redactor/lang/hr.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/Assets/js/plugins/redactor/lang/hu.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/Assets/js/plugins/redactor/lang/id.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/Assets/js/plugins/redactor/lang/it.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/Assets/js/plugins/redactor/lang/ja.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/Assets/js/plugins/redactor/lang/ko.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/Assets/js/plugins/redactor/lang/lt.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/Assets/js/plugins/redactor/lang/lv.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/Assets/js/plugins/redactor/lang/mk.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/Assets/js/plugins/redactor/lang/nl.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/Assets/js/plugins/redactor/lang/no_NB.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/Assets/js/plugins/redactor/lang/pl.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/Assets/js/plugins/redactor/lang/pt_br.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/Assets/js/plugins/redactor/lang/pt_pt.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/Assets/js/plugins/redactor/lang/ro.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/Assets/js/plugins/redactor/lang/ru.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/Assets/js/plugins/redactor/lang/sk.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/Assets/js/plugins/redactor/lang/sl.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/Assets/js/plugins/redactor/lang/sq.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/Assets/js/plugins/redactor/lang/sr-cir.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/Assets/js/plugins/redactor/lang/sr-lat.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/Assets/js/plugins/redactor/lang/sv.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/Assets/js/plugins/redactor/lang/th.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/Assets/js/plugins/redactor/lang/tr.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/Assets/js/plugins/redactor/lang/ua.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/Assets/js/plugins/redactor/lang/vi.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/Assets/js/plugins/redactor/lang/zh_cn.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/Assets/js/plugins/redactor/lang/zh_tw.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/Assets/js/plugins/redactor/plugins/clips/clips.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/Assets/js/plugins/redactor/plugins/clips/clips.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/Assets/js/plugins/redactor/plugins/counter/counter.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/Assets/js/plugins/redactor/plugins/definedlinks/definedlinks.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/Assets/js/plugins/redactor/plugins/filemanager/filemanager.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/Assets/js/plugins/redactor/plugins/fontcolor/fontcolor.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/Assets/js/plugins/redactor/plugins/fontfamily/fontfamily.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/Assets/js/plugins/redactor/plugins/fontsize/fontsize.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/Assets/js/plugins/redactor/plugins/fullscreen/fullscreen.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/Assets/js/plugins/redactor/plugins/imagemanager/imagemanager.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/Assets/js/plugins/redactor/plugins/limiter/limiter.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/Assets/js/plugins/redactor/plugins/table/table.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/Assets/js/plugins/redactor/plugins/textdirection/textdirection.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/Assets/js/plugins/redactor/plugins/textexpander/textexpander.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/Assets/js/plugins/redactor/plugins/video/video.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/Assets/js/plugins/redactor/redactor-font.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/Assets/js/plugins/redactor/redactor.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/Assets/js/plugins/redactor/redactor.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/Assets/js/plugins/redactor/redactor.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/Assets/js/plugins/redactor/redactor.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/Assets/js/plugins/trumbowyg/langs/ar.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/Assets/js/plugins/trumbowyg/langs/bg.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/Assets/js/plugins/trumbowyg/langs/ca.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/Assets/js/plugins/trumbowyg/langs/cs.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/Assets/js/plugins/trumbowyg/langs/da.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/Assets/js/plugins/trumbowyg/langs/de.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/Assets/js/plugins/trumbowyg/langs/el.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/Assets/js/plugins/trumbowyg/langs/es.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/Assets/js/plugins/trumbowyg/langs/es_ar.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/Assets/js/plugins/trumbowyg/langs/fa.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/Assets/js/plugins/trumbowyg/langs/fi.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/Assets/js/plugins/trumbowyg/langs/fr.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/Assets/js/plugins/trumbowyg/langs/he.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/Assets/js/plugins/trumbowyg/langs/hr.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/Assets/js/plugins/trumbowyg/langs/hu.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/Assets/js/plugins/trumbowyg/langs/id.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/Assets/js/plugins/trumbowyg/langs/it.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/Assets/js/plugins/trumbowyg/langs/ja.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/Assets/js/plugins/trumbowyg/langs/ko.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/Assets/js/plugins/trumbowyg/langs/my.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/Assets/js/plugins/trumbowyg/langs/nl.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/Assets/js/plugins/trumbowyg/langs/no_nb.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/Assets/js/plugins/trumbowyg/langs/ph.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/Assets/js/plugins/trumbowyg/langs/pl.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/Assets/js/plugins/trumbowyg/langs/pt.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/Assets/js/plugins/trumbowyg/langs/ro.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/Assets/js/plugins/trumbowyg/langs/rs.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/Assets/js/plugins/trumbowyg/langs/rs_latin.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/Assets/js/plugins/trumbowyg/langs/ru.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/Assets/js/plugins/trumbowyg/langs/sk.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/Assets/js/plugins/trumbowyg/langs/sv.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/Assets/js/plugins/trumbowyg/langs/tr.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/Assets/js/plugins/trumbowyg/langs/ua.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/Assets/js/plugins/trumbowyg/langs/vi.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/Assets/js/plugins/trumbowyg/langs/zh_cn.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/Assets/js/plugins/trumbowyg/langs/zh_tw.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/Assets/js/plugins/trumbowyg/plugins/base64/trumbowyg.base64.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/Assets/js/plugins/trumbowyg/plugins/base64/trumbowyg.base64.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/Assets/js/plugins/trumbowyg/plugins/cleanpaste/trumbowyg.cleanpaste.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/Assets/js/plugins/trumbowyg/plugins/cleanpaste/trumbowyg.cleanpaste.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/Assets/js/plugins/trumbowyg/plugins/colors/trumbowyg.colors.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/Assets/js/plugins/trumbowyg/plugins/colors/trumbowyg.colors.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/Assets/js/plugins/trumbowyg/plugins/colors/ui/sass/trumbowyg.colors.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/Assets/js/plugins/trumbowyg/plugins/colors/ui/trumbowyg.colors.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/Assets/js/plugins/trumbowyg/plugins/colors/ui/trumbowyg.colors.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/Assets/js/plugins/trumbowyg/plugins/emoji/trumbowyg.emoji.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/Assets/js/plugins/trumbowyg/plugins/emoji/trumbowyg.emoji.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/Assets/js/plugins/trumbowyg/plugins/insertaudio/trumbowyg.insertaudio.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/Assets/js/plugins/trumbowyg/plugins/insertaudio/trumbowyg.insertaudio.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/Assets/js/plugins/trumbowyg/plugins/noembed/trumbowyg.noembed.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/Assets/js/plugins/trumbowyg/plugins/noembed/trumbowyg.noembed.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/Assets/js/plugins/trumbowyg/plugins/pasteimage/trumbowyg.pasteimage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/Assets/js/plugins/trumbowyg/plugins/pasteimage/trumbowyg.pasteimage.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/Assets/js/plugins/trumbowyg/plugins/preformatted/trumbowyg.preformatted.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/Assets/js/plugins/trumbowyg/plugins/preformatted/trumbowyg.preformatted.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/Assets/js/plugins/trumbowyg/plugins/table/trumbowyg.table.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/Assets/js/plugins/trumbowyg/plugins/table/trumbowyg.table.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/Assets/js/plugins/trumbowyg/plugins/template/trumbowyg.template.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/Assets/js/plugins/trumbowyg/plugins/template/trumbowyg.template.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/Assets/js/plugins/trumbowyg/plugins/upload/trumbowyg.upload.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/Assets/js/plugins/trumbowyg/plugins/upload/trumbowyg.upload.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/Assets/js/plugins/trumbowyg/trumbowyg.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/Assets/js/plugins/trumbowyg/trumbowyg.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/Assets/js/plugins/trumbowyg/ui/icons.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/Assets/js/plugins/trumbowyg/ui/sass/trumbowyg.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/Assets/js/plugins/trumbowyg/ui/trumbowyg.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/Assets/js/plugins/trumbowyg/ui/trumbowyg.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/Assets/js/post.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/Assets/js/setting.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/Controller/PageController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/Controller/PostController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/Controller/SettingController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/Language/english/config.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/Language/english/dashboard/menu.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/Language/russian/config.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/Language/russian/dashboard/main.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/Language/russian/dashboard/menu.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/Model/Page/Page.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/Model/Page/PageRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/Model/Post/Post.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/Model/Post/PostRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/Model/Setting/Setting.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/Model/Setting/SettingRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/Model/User/User.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/Model/User/UserRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/View/footer.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/View/header.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/View/pages/create.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/View/pages/edit.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/View/pages/list.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/View/posts/create.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/View/posts/edit.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/View/posts/list.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/View/setting/general.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/View/setting/menu_item.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/View/setting/menus.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/View/setting/tabs.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cms/Model/Menu/Menu.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cms/Model/Menu/MenuRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cms/Model/MenuItem/MenuItem.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cms/Model/MenuItem/MenuItemRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/engine/Core/Config/Repository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/engine/Core/Database/ActiveRecord.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/engine/Core/Template/Asset.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/engine/Core/Template/Component.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/engine/Core/Template/Menu.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/engine/Core/Template/Setting.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/engine/Function.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/engine/Load.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/engine/Model.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/engine/Service/Load/Provider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.htaccess" beforeDir="false" afterPath="$PROJECT_DIR$/.htaccess" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/countdown.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/countdown.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/.htaccess" beforeDir="false" afterPath="$PROJECT_DIR$/admin/.htaccess" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/Assets/css/bootstrap-grid.css" beforeDir="false" afterPath="$PROJECT_DIR$/admin/Assets/css/bootstrap-grid.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/Assets/css/bootstrap-grid.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/admin/Assets/css/bootstrap-grid.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/Assets/css/bootstrap-grid.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/admin/Assets/css/bootstrap-grid.min.css" afterDir="false" />
@@ -23,40 +212,60 @@
       <change beforePath="$PROJECT_DIR$/admin/Assets/css/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/admin/Assets/css/login.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/Assets/js/bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/admin/Assets/js/bootstrap.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/Assets/js/bootstrap.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/admin/Assets/js/bootstrap.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/Config/database.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/Config/database.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/Config/main.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/Config/main.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/Controller/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/Controller/AdminController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/Controller/DashboardController.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/Controller/DashboardController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/Controller/ErrorController.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/Controller/ErrorController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/Controller/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/Controller/LoginController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/Route.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/Route.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/View/dashboard.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/View/dashboard.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/View/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/View/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cms/Controller/CmsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/cms/Controller/CmsController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cms/Controller/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/cms/Controller/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cms/Route.php" beforeDir="false" afterPath="$PROJECT_DIR$/cms/Route.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/themes/default/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/content/themes/default/footer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/themes/default/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/content/themes/default/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/themes/default/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/content/themes/default/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/engine/Cms.php" beforeDir="false" afterPath="$PROJECT_DIR$/engine/Cms.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/engine/Config/Service.php" beforeDir="false" afterPath="$PROJECT_DIR$/engine/Config/Service.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/engine/Controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/engine/Controller.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/engine/Core/Auth/Auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/engine/Core/Auth/Auth.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/engine/Core/Auth/AuthInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/engine/Core/Auth/AuthInterface.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/engine/Core/Config/Config.php" beforeDir="false" afterPath="$PROJECT_DIR$/engine/Core/Config/Config.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/engine/Core/Database/Connection.php" beforeDir="false" afterPath="$PROJECT_DIR$/engine/Core/Database/Connection.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/engine/Core/Database/QueryBuilder.php" beforeDir="false" afterPath="$PROJECT_DIR$/engine/Core/Database/QueryBuilder.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/engine/Core/Request/Request.php" beforeDir="false" afterPath="$PROJECT_DIR$/engine/Core/Request/Request.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/engine/Core/Router/DispatchedRoute.php" beforeDir="false" afterPath="$PROJECT_DIR$/engine/Core/Router/DispatchedRoute.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/engine/Core/Router/Router.php" beforeDir="false" afterPath="$PROJECT_DIR$/engine/Core/Router/Router.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/engine/Core/Router/UrlDispatcher.php" beforeDir="false" afterPath="$PROJECT_DIR$/engine/Core/Router/UrlDispatcher.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/engine/Core/Template/Theme.php" beforeDir="false" afterPath="$PROJECT_DIR$/engine/Core/Template/Theme.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/engine/Core/Template/View.php" beforeDir="false" afterPath="$PROJECT_DIR$/engine/Core/Template/View.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/engine/DI/DI.php" beforeDir="false" afterPath="$PROJECT_DIR$/engine/DI/DI.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/engine/Helper/Common.php" beforeDir="false" afterPath="$PROJECT_DIR$/engine/Helper/Common.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/engine/Helper/Cookie.php" beforeDir="false" afterPath="$PROJECT_DIR$/engine/Helper/Cookie.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/engine/Service/AbstractProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/engine/Service/AbstractProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/engine/Service/Config/Provider.php" beforeDir="false" afterPath="$PROJECT_DIR$/engine/Service/Config/Provider.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/engine/Service/Database/Provider.php" beforeDir="false" afterPath="$PROJECT_DIR$/engine/Service/Database/Provider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/engine/Service/Request/Provider.php" beforeDir="false" afterPath="$PROJECT_DIR$/engine/Service/Request/Provider.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/engine/Service/Router/Provider.php" beforeDir="false" afterPath="$PROJECT_DIR$/engine/Service/Router/Provider.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/engine/Service/View/Provider.php" beforeDir="false" afterPath="$PROJECT_DIR$/engine/Service/View/Provider.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/engine/bootstrap.php" beforeDir="false" afterPath="$PROJECT_DIR$/engine/bootstrap.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/autoload.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/autoload.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_real.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_real.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_static.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_static.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/installed.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/installed.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" doNotAsk="true">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
   </component>
@@ -71,10 +280,7 @@
       <path value="$PROJECT_DIR$/vendor/composer" />
     </include_path>
   </component>
-  <component name="ProjectId" id="2NiM4hrvbSQ9hb6SZe8UkJ7ThVH" />
-  <component name="ProjectLevelVcsManager">
-    <ConfirmationsSetting value="2" id="Add" />
-  </component>
+  <component name="ProjectId" id="2NrWHaYUVjSpfECcQjOa1OxYzI8" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -84,103 +290,54 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/xampp/htdocs/countdown/admin&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/xampp/htdocs/College-Notes-Gallery&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;php.override.implement.member.chooser.php.doc&quot;: &quot;NONE&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mariadb&quot;
+    ]
   }
 }</component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\countdown\admin" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\countdown\content\themes\default" />
-      <recent name="C:\xampp\htdocs\countdown" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="cms.sql" type="DatabaseScript" editBeforeRun="true" temporary="true" nameIsGenerated="true">
+      <script-file value="$PROJECT_DIR$/cms.sql" />
+      <script-mode>FILE</script-mode>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Database Script.cms.sql" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="6e110170-f39b-49e0-8323-1333243ac1f2" name="Changes" comment="" />
-      <created>1680142274749</created>
+      <changelist id="761b6a15-25ae-4086-83b3-b44a6144a1db" name="Changes" comment="" />
+      <created>1680422596645</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1680142274749</updated>
-      <workItem from="1680142281006" duration="12735000" />
-      <workItem from="1680184940626" duration="672000" />
-      <workItem from="1680226155000" duration="9960000" />
-      <workItem from="1680263915662" duration="16802000" />
+      <updated>1680422596645</updated>
+      <workItem from="1680422602665" duration="1392000" />
+      <workItem from="1680424173966" duration="777000" />
+      <workItem from="1680614272189" duration="4000" />
+      <workItem from="1680686672876" duration="51000" />
     </task>
-    <task id="LOCAL-00001" summary="works">
-      <created>1680149550185</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1680149550185</updated>
-    </task>
-    <task id="LOCAL-00002" summary="still working">
-      <created>1680155193004</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1680155193004</updated>
-    </task>
-    <task id="LOCAL-00003" summary="is still working">
-      <created>1680234220591</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1680234220591</updated>
-    </task>
-    <task id="LOCAL-00004" summary="is still working + sample">
-      <created>1680236200701</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1680236200701</updated>
-    </task>
-    <task id="LOCAL-00005" summary="still continues to work, but since there is no config in cms main does not work">
-      <created>1680266555694</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1680266555694</updated>
-    </task>
-    <task id="LOCAL-00006" summary="cookies are being recorded, let's see what happens next">
-      <created>1680272055985</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1680272055985</updated>
-    </task>
-    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="works" />
-    <MESSAGE value="still working" />
-    <MESSAGE value="is still working" />
-    <MESSAGE value="is still working + sample" />
-    <MESSAGE value="still continues to work, but since there is no config in cms main does not work" />
-    <MESSAGE value="cookies are being recorded, let's see what happens next" />
-    <option name="LAST_COMMIT_MESSAGE" value="cookies are being recorded, let's see what happens next" />
   </component>
 </project>

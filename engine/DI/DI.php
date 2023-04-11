@@ -1,25 +1,41 @@
 <?php
-// Dependency injection - Внедрение зависимости
+
 namespace Engine\DI;
 
 class DI
 {
-    private array $container = []; // сюда сохраняем все зависимости и отсюда их берём
+    /**
+     * @var array
+     */
+    private $container = [];
 
-    public function set($key, $value): static // устанавливает зависимость
+    /**
+     * @param $key
+     * @param $value
+     * @return $this
+     */
+    public function set($key, $value)
     {
         $this->container[$key] = $value;
 
         return $this;
     }
 
-    public function get($key) // получает зависимость
+    /**
+     * @param $key
+     * @return mixed
+     */
+    public function get($key)
     {
         return $this->has($key);
     }
 
-    public function has($key)// для проверки наличия ключа
+    /**
+     * @param $key
+     * @return bool
+     */
+    public function has($key)
     {
-        return $this->container[$key] ?? null;
+        return isset($this->container[$key]) ? $this->container[$key] : null;
     }
 }

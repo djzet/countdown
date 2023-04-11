@@ -2,104 +2,150 @@
 
 namespace Engine\Core\Template;
 
-use Exception;
+use Engine\Core\Config\Config;
 
 class Theme
 {
-    const RULES_NAME_FILE =
-        [
-            'header'  => 'header-%s',
-            'footer'  => 'footer-%s',
-            'sidebar' => 'sidebar-%s',
-        ];
-    public string $url = '';
-    protected array $data = [];
     /**
-     * @throws Exception
+     * Rules template name
      */
-    public function header($name = null): void
+    const RULES_NAME_FILE = [
+        'header'  => 'header-%s',
+        'footer'  => 'footer-%s',
+        'sidebar' => 'sidebar-%s',
+    ];
+
+    const URL_THEME_MASK = '%s/content/themes/%s';
+
+    /**
+     * Url current theme
+     * @type string
+     */
+    protected static $url = '';
+
+    /**
+     * @var array
+     */
+    protected static $data = [];
+
+    /**
+     * @var Asset
+     */
+    public $asset;
+
+    /**
+     * @var Theme
+     */
+    public $theme;
+
+    /**
+     * Theme constructor.
+     */
+    public function __construct()
     {
-        $name = (string) $name;
-        $file = 'header';
-        if($name !== '')
-        {
-            $file = sprintf(self::RULES_NAME_FILE['header'], $name);
-        }
-        $this->loadTemplateFile($file);
+        $this->asset = new Asset();
+        $this->theme = $this;
     }
 
     /**
-     * @throws Exception
+     * @return string
      */
-    public function footer($name = ''): void
+    public static function getUrl()
     {
-        $name = (string) $name;
-        $file = 'footer';
-        if($name !== '')
-        {
-            $file = sprintf(self::RULES_NAME_FILE['footer'], $name);
-        }
-        $this->loadTemplateFile($file);
+        $currentTheme = Config::item('defaultTheme', 'main');
+        $baseUrl      = Config::item('baseUrl', 'main');
+
+        return sprintf(self::URL_THEME_MASK, $baseUrl, $currentTheme);
     }
 
     /**
-     * @throws Exception
+     * Show title
      */
-    public function sidebar($name = ''): void
+    public static function title()
     {
-        $name = (string) $name;
-        $file = 'sidebar';
-        if($name !== '')
-        {
-            $file = sprintf(self::RULES_NAME_FILE['sidebar'], $name);
-        }
-        $this->loadTemplateFile($file);
+        $nameSite    = Setting::get('name_site');
+        $description = Setting::get('description');
+
+        echo $nameSite . ' | ' . $description;
     }
 
     /**
-     * @throws Exception
+     * @param null $name
      */
-    public function block($name = '', $data = []): void
+    public static function header($name = null)
+    {
+        $name = (string) $name;
+        $file = self::detectNameFile($name, __FUNCTION__);
+
+        Component::load($file);
+    }
+
+    /**
+     * @param string $name
+     */
+    public static function footer($name = '')
+    {
+        $name = (string) $name;
+        $file = self::detectNameFile($name, __FUNCTION__);
+
+        Component::load($file);
+    }
+
+    /**
+     * @param string $name
+     */
+    public static function sidebar($name = '')
+    {
+        $name = (string) $name;
+        $file = self::detectNameFile($name, __FUNCTION__);
+
+        Component::load($file);
+    }
+
+    /**
+     * @param string $name
+     * @param array $data
+     */
+    public static function block($name = '', $data = [])
     {
         $name = (string) $name;
 
-        if($name !== '')
-        {
-            $this->loadTemplateFile($name, $data);
+        if ($name !== '') {
+            Component::load($name, $data);
         }
     }
 
     /**
-     * @throws Exception
+     * @param string $name
+     * @param string $function
+     * @return string
      */
-    private function loadTemplateFile($nameFile, $data = []): void
+    private static function detectNameFile($name, $function)
     {
-        $templateFile = ROOT_DIR . '/content/themes/default/' . $nameFile . '.php';
-
-        if (is_file($templateFile))
-        {
-            extract($data);
-            require_once $templateFile;
-        }
-        else
-        {
-            throw new Exception(sprintf('View file "$s" does not exist!', $templateFile));
-        }
+        return empty(trim($name)) ? $function : sprintf(self::RULES_NAME_FILE[$function], $name);
     }
 
     /**
      * @return array
      */
-    public function getData(): array
+    public static function getData()
     {
-        return $this->data;
+        return static::$data;
     }
 
     /**
      * @param array $data
      */
-    public function setData(array $data): void
+    public static function setData($data)
     {
-        $this->data = $data;
+        static::$data = $data;
+    }
+
+    /**
+     * @return string
+     */
+    public static function getThemePath()
+    {
+        return ROOT_DIR . '/content/themes/default';
     }
 }

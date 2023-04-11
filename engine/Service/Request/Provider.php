@@ -2,17 +2,24 @@
 
 namespace Engine\Service\Request;
 
-use Engine\Core\Request\Request;
 use Engine\Service\AbstractProvider;
+use Engine\Core\Request\Request;
 
 class Provider extends AbstractProvider
 {
-    public string $serverName = 'request';
 
+    /**
+     * @var string
+     */
+    public $serviceName = 'request';
+
+    /**
+     * @return mixed
+     */
     public function init()
     {
         $request = new Request();
 
-        $this->di->set($this->serverName, $request);
+        $this->di->set($this->serviceName, $request);
     }
 }

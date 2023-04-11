@@ -1,5 +1,7 @@
 <?php
-const ROOT_DIR = __DIR__;
-const ENV = 'Admin';
+define('ROOT_DIR', __DIR__);
 
-require_once '../engine/bootstrap.php';
+define('ENV', 'Admin');
+define('DS', DIRECTORY_SEPARATOR);
+
+require_once '../engine/Bootstrap.php';

@@ -2,47 +2,93 @@
 
 namespace Engine\Core\Template;
 
-use Engine\Core\Template\Theme;
-use ErrorException;
+use Engine\DI\DI;
 
 class View
 {
-    protected \Engine\Core\Template\Theme $theme;
+    /**
+     * @var \Engine\DI\DI
+     */
+    public $di;
 
-    public function __construct()
+    /**
+     * @var \Engine\Core\Template\Theme
+     */
+    protected $theme;
+
+    /**
+     * @var Setting
+     */
+    protected $setting;
+
+    /**
+     * @var Menu
+     */
+    protected $menu;
+
+    /**
+     * View constructor.
+     * @param DI $di
+     */
+    public function __construct(DI $di)
     {
-        $this->theme = new Theme();
+        $this->di      = $di;
+        $this->theme   = new Theme();
+        $this->setting = new Setting($di);
+        $this->menu    = new Menu($di);
     }
 
-    public function render($template, $vars = []): void
+    /**
+     * @param $template
+     * @param array $data
+     * @throws \Exception
+     */
+    public function render($template, $data = [])
     {
+        $functions = Theme::getThemePath() . '/functions.php';
+        if (file_exists($functions)) {
+            include_once $functions;
+        }
+
         $templatePath = $this->getTemplatePath($template, ENV);
 
         if (!is_file($templatePath)) {
-            throw new \InvalidArgumentException(sprintf('Template "%s" not found in "%s"', $template, $templatePath));
+            throw new \InvalidArgumentException(
+                sprintf('Template "%s" not found in "%s"', $template, $templatePath)
+            );
         }
 
-        $this->theme->setData($vars);
-        extract($vars);//из всех ключей создаст переменные
+        // Add language in this template
+        $data['lang'] = $this->di->get('language');
 
-        ob_start();//включаем буфферизацию - используется при рендере
-        ob_implicit_flush(0);//отключаем не явную очистку
+        $this->theme->setData($data);
+
+        extract($data);
+        ob_start();
+        ob_implicit_flush(0);
 
         try {
-            require_once $templatePath;
-        } catch (ErrorException $e) {
-            ob_end_clean();//очистка буффера
+            require($templatePath);
+        } catch (\Exception $e){
+            ob_end_clean();
             throw $e;
         }
-        echo ob_get_clean();//получает содержимое текущего буффера
+
+        echo ob_get_clean();
     }
 
-    private function getTemplatePath($template, $env = null): string
+
+    /**
+     * @param $template
+     * @param null $env
+     * @return string
+     */
+    private function getTemplatePath($template, $env = null)
     {
-        if ($env == 'Cms') {
+        if ($env === 'Cms') {
             return ROOT_DIR . '/content/themes/default/' . $template . '.php';
         }
 
-        return ROOT_DIR . '/View/' . $template . '.php';
+        return path('view') . '/' . $template . '.php';
     }
 }

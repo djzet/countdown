@@ -9,8 +9,15 @@ use Engine\Core\Database\QueryBuilder;
 
 class LoginController extends Controller
 {
-    protected Auth $auth;
+    /**
+     * @var Auth
+     */
+    protected $auth;
 
+    /**
+     * LoginController constructor.
+     * @param DI $di
+     */
     public function __construct(DI $di)
     {
         parent::__construct($di);
@@ -18,19 +25,20 @@ class LoginController extends Controller
         $this->auth = new Auth();
 
         if ($this->auth->hashUser() !== null) {
+            // redirect
             header('Location: /admin/');
-            exit();
+            exit;
         }
     }
 
-    public function form(): void
+    public function form()
     {
         $this->view->render('login');
     }
 
     public function authAdmin()
     {
-        $params = $this->request->post;
+        $params       = $this->request->post;
         $queryBuilder = new QueryBuilder();
 
         $sql = $queryBuilder
@@ -46,23 +54,23 @@ class LoginController extends Controller
         if (!empty($query)) {
             $user = $query[0];
 
-            if ($user['role'] === 'admin') {
-                $hash = md5($user['id'] . $user['email'] . $user['password'] . $this->auth->salt());
+            if ($user->role == 'admin') {
+                $hash = md5($user->id . $user->email . $user->password . $this->auth->salt());
 
                 $sql = $queryBuilder
                     ->update('user')
                     ->set(['hash' => $hash])
-                    ->where('id', $user['id'])
-                    ->sql();
+                    ->where('id', $user->id)->sql();
 
                 $this->db->execute($sql, $queryBuilder->values);
 
                 $this->auth->authorize($hash);
 
-                header('Location: /admin/login');
-                exit();
+                header( 'Location: /admin/login/');
+                exit;
             }
         }
+
         echo 'Incorrect email or password.';
     }
 }
